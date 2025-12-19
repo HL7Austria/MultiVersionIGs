@@ -1,0 +1,22 @@
+# ------------------------
+# Project AIST-PICA-R4
+# ------------------------
+AIST-PICA-R4/build/
+AIST-PICA-R4/output/
+AIST-PICA-R4/input-cache/
+AIST-PICA-R4/fsh-generated/
+AIST-PICA-R4/temp/
+AIST-PICA-R4/template/
+
+# ------------------------
+# Project AIST-PICA-R5
+# ------------------------
+AIST-PICA-R5/build/
+AIST-PICA-R5/output/
+AIST-PICA-R5/input-cache/
+AIST-PICA-R5/fsh-generated/
+AIST-PICA-R5/temp/
+AIST-PICA-R5/template/
+
+# VS Code
+.vscode/
