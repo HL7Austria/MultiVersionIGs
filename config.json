@@ -1,0 +1,126 @@
+{
+  "comparison": {
+    "previous_version": "R4",
+    "current_version": "R5",
+
+    "previous_folder": "AIST-PICA-R4",
+    "current_folder": ".",
+
+    "fsh_path": "input/fsh",
+    "output_path": "output"
+  },
+
+  "tables": [
+    "tbl-key-inner",
+    "tbl-diff-inner",
+    "tbl-snap-inner"
+
+  ],
+  "tabs":[
+    "tbl-summ",
+    "tabs-all"
+  ],
+
+  "children_hidden": true,
+  
+  "mappings": {
+    "global_mappings": [
+      {
+        "r4_path": "AuditEvent.type",
+        "r5_path": "AuditEvent.category",
+        "change_type": "RENAMED",
+        "description": "Renamed from type to category. Type changed from Coding to CodeableConcept."
+      },
+      {
+        "r4_path": "AuditEvent.subtype",
+        "r5_path": "AuditEvent.code",
+        "change_type": "RENAMED",
+        "description": "Renamed from subtype to code. Type changed from Coding to CodeableConcept."
+      },
+      {
+        "r4_path": "AuditEvent.period",
+        "r5_path": "AuditEvent.occurred[x]",
+        "change_type": "RENAMED",
+        "description": "Period element deleted. Use occurred[x] (dateTime) or recorded."
+      },
+      {
+        "r4_path": "AuditEvent.purposeOfEvent",
+        "r5_path": "AuditEvent.authorization",
+        "change_type": "RENAMED",
+        "description": "Renamed from purposeOfEvent to authorization."
+      },
+      {
+        "r4_path": "AuditEvent.outcomeDesc",
+        "r5_path": "AuditEvent.outcome.detail",
+        "change_type": "MOVED",
+        "description": "Element deleted. Use outcome.detail."
+      },
+      {
+        "r4_path": "AuditEvent.agent.altId",
+        "r5_path": "AuditEvent.agent.who.identifier",
+        "change_type": "MOVED",
+        "description": "Alternative ID removed. Use agent.who.identifier or extension."
+      },
+      {
+        "r4_path": "AuditEvent.agent.name",
+        "r5_path": "AuditEvent.agent.who.display",
+        "change_type": "MOVED",
+        "description": "Element deleted. Use agent.who.display."
+      },
+      {
+        "r4_path": "AuditEvent.agent.media",
+        "r5_path": "AuditEvent.entity",
+        "change_type": "MOVED",
+        "description": "Element deleted. Media now handled via Entity."
+      },
+      {
+        "r4_path": "AuditEvent.agent.network",
+        "r5_path": "AuditEvent.agent.network[x]",
+        "change_type": "RENAMED",
+        "description": "Renamed to network[x]. Support for Endpoint Reference and URI added."
+      },
+      {
+        "r4_path": "AuditEvent.agent.network.address",
+        "r5_path": "AuditEvent.agent.network[x]",
+        "change_type": "MERGED",
+        "description": "Deleted. Value now goes into network[x] (string/uri)."
+      },
+      {
+        "r4_path": "AuditEvent.agent.network.type",
+        "r5_path": "AuditEvent.agent.network[x]",
+        "change_type": "MERGED",
+        "description": "Deleted. Network type concept changed."
+      },
+      {
+        "r4_path": "AuditEvent.agent.purposeOfUse",
+        "r5_path": "AuditEvent.agent.authorization",
+        "change_type": "RENAMED",
+        "description": "Renamed from purposeOfUse to authorization."
+      },
+      {
+        "r4_path": "AuditEvent.entity.type",
+        "r5_path": "AuditEvent.entity.what.type",
+        "change_type": "MOVED",
+        "description": "Element deleted. Use entity.what.type if available."
+      },
+      {
+        "r4_path": "AuditEvent.entity.lifecycle",
+        "r5_path": "AuditEvent.entity.detail",
+        "change_type": "STRUCTURE",
+        "description": "Lifecycle element deleted. Use extension or detail."
+      },
+      {
+        "r4_path": "AuditEvent.entity.name",
+        "r5_path": "AuditEvent.entity.what.display",
+        "change_type": "MOVED",
+        "description": "Element deleted. Use entity.what.display."
+      },
+      {
+        "r4_path": "AuditEvent.entity.description",
+        "r5_path": "AuditEvent.entity.detail.valueString",
+        "change_type": "MOVED",
+        "description": "Element deleted. Use entity.detail.valueString."
+      }
+    ]
+}
+}
